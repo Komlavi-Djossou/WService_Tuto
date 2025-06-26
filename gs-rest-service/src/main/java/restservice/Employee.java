@@ -1,41 +1,59 @@
 package restservice;
 
 public class Employee {
-    //Attributes
-    private int employee_id;
-    private String first_name;
-    private String last_name;
-    private String email;
-    private String title;
+   // Attributes
+    private final String employee_id;
+    private final String first_name;
+    private final String last_name;
+    private final String email;
+    private final String title;
 
-    // Constructor
-    public Employee(int id, String fname, String lname, String email, String title) {
-        this.employee_id = id;
-        this.first_name = fname;
-        this.last_name = lname;
+    // Constructors
+    public Employee(String employee_id, String first_name, String last_name, String email, String title) {
+        this.employee_id = employee_id;
+        this.first_name = first_name;
+        this.last_name = last_name;
         this.email = email;
         this.title = title;
     }
 
-   // GETTERS FOR EACH VARIABLE
+    // Getters
+    public String getId()
+    {
+        return employee_id;
+    }
 
-   public int getEmployee_id () {
-       return employee_id;
-   }
+    public String getFirstName()
+    {
+        return first_name;
+    }
 
-   public String getFirst_name () {
-       return first_name;
-   }
-    public String getLast_name () {
+    public String getLastName()
+    {
         return last_name;
     }
 
-    public String getEmail () {
+    public String getEmail()
+    {
         return email;
     }
-    public String getTitle () {
+
+    public String getTitle()
+    {
         return title;
     }
 
+    // Employee's full info
+    @Override
+    public String toString()
+    {
+
+        return "Employee: ID = "
+                + employee_id + ", First Name = "
+                + first_name + ", Last Name = "
+                + last_name + ", email = "
+                + email + ", title = "
+                + title;
+    }
 
 }

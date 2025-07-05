@@ -2,11 +2,11 @@ package restservice;
 
 public class Employee {
    // Attributes
-    private final String employee_id;
-    private final String first_name;
-    private final String last_name;
-    private final String email;
-    private final String title;
+    private  final String employee_id;
+    private  final String first_name;
+    private  final String last_name;
+    private  final String email;
+    private  final String title;
 
     // Constructors
     public Employee(String employee_id, String first_name, String last_name, String email, String title) {
@@ -42,6 +42,7 @@ public class Employee {
     {
         return title;
     }
+
 
     // Employee's full info
     @Override
